@@ -7,8 +7,6 @@ import rigoImage from "../../img/rigo-baby.jpg";
 const Home = () => {
       const [inputValue, setInputValue] = useState("");
 	  const [todos, setTodos] = useState([]);
-      
-	  
 
 	return (
 		<div className="container">
@@ -18,7 +16,8 @@ const Home = () => {
 			   onChange = {(e)=> setInputValue(e.target.value)}
 			   value = {inputValue}
 			   onKeyPress={(e) => {
-	if (e.key === "Enter" && inputValue.trim() !== "") {
+	if (e.key === "Enter" && inputValue.trim() !== "") 
+		{
 		setTodos(todos.concat(inputValue));
 		setInputValue("");
 	}
